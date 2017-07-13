@@ -5,9 +5,7 @@ pipeline {
 		stage('build'){
                         steps {
 
-				sh 'export ANT_HOME=/opt/apache-ant-1.10.1'
-				sh 'export PATH=$ANT_HOME/bin:$PATH'
-				sh '${ANT_HOME}/bin/ant -f build.xml -v'
+				sh '/opt/apache-ant-1.10.1/bin/ant -f build.xml -v'
 			   }
 			  
 			}
