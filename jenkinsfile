@@ -6,7 +6,7 @@ pipeline {
             		steps {
 				sh 'export ANT_HOME=/opt/apache-ant-1.10.1'
 				sh 'export PATH=$ANT_HOME/bin:$PATH'
-				sh "ant -f build.xml -v"
+				sh 'ant -f build.xml -v'
 			   }
 			}
 		}
