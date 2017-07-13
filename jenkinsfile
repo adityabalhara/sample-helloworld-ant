@@ -2,14 +2,14 @@ pipeline {
 	agent any
 	
 	 stages {
-        	stage('BUILD') {
-            		dir ('new'){
+        	stage('BUILD') 
+            	dir ('new'){
 			   steps {
 				sh 'export ANT_HOME=/opt/apache-ant-1.10.1'
 				sh 'export PATH=$ANT_HOME/bin:$PATH'
 				sh 'ant -f build.xml -v'
 			   }
-			  }
+			  
 			}
 		}
 
