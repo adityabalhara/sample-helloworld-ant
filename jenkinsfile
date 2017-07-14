@@ -14,11 +14,11 @@ pipeline {
 	post {
                 success {
                         emailext {
-                                subject: "${env.JOB_NAME} [${env.BUILD_NUMBER}] Ran!"
-				body: "${env.JOB_NAME} [${env.BUILD_NUMBER}] is successful"
+                                subject: "${env.JOB_NAME} [${env.BUILD_NUMBER}] Ran!",
+				body: "${env.JOB_NAME} [${env.BUILD_NUMBER}] is successful",
 				to: "aditya.balhara@gmail.com"
                                 }
                         }
                 }
-	}
+
 
