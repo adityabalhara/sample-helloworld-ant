@@ -1,11 +1,13 @@
 pipeline {
 	agent any
 	
-	stages{
+	 stages {
 		stage('build'){
-			steps {
-				sh 'ant -f build.xml -v'
+                        steps {
+
+				sh '/opt/apache-ant-1.10.1/bin/ant -f build.xml -v'
 			   }
+			  
 			}
 		}
 		 post {
