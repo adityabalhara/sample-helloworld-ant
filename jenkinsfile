@@ -13,7 +13,9 @@ pipeline {
 		 post {
                 success {
                         emailext {
-                                subject: "Ran!", body: "is successful", to: "aditya.balhara@gmail.com"
+                                subject: "${env.JOB_NAME} [${env.BUILD_NUMBER}] Ran!",
+				body: "${env.JOB_NAME} [${env.BUILD_NUMBER}] is successful",
+				to: "aditya.balhara@gmail.com"
                                 }
                         }
                 }
